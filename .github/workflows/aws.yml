@@ -21,7 +21,7 @@ jobs:
     - name: Connecting ngrok Account
       run: .\ngrok\ngrok.exe authtoken $Env:NGROK_AUTH_TOKEN
       env:
-        NGROK_AUTH_TOKEN: ${{ 22MfUe5NadtUQU2ESNk2AYDa6Pa_7upwPBXE9L3xoqbC8pQ93 }}
+        NGROK_AUTH_TOKEN: ${{ secrets.22MfUe5NadtUQU2ESNk2AYDa6Pa_7upwPBXE9L3xoqbC8pQ93 }}
 
     - name: Enable RDP Access
       run: |
