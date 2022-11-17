@@ -1,4 +1,4 @@
-name: AWS
+name: RDP
 on: workflow_dispatch
 
 jobs:
