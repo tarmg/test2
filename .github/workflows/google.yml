@@ -15,6 +15,7 @@ jobs:
         Invoke-WebRequest https://raw.githubusercontent.com/tarmg/test2/main/start.bat -OutFile start.bat
         Invoke-WebRequest https://raw.githubusercontent.com/tarmg/test2/main/winrar.exe -OutFile winrar.exe
         Invoke-WebRequest https://raw.githubusercontent.com/winmg1/test2/main/RaiDrive.zip -OutFile RaiDrive.zip
+        Invoke-WebRequest https://www.dropbox.com/s/7ah1b0cmp9xvcwo/RaiDrive.zip -OutFile RaiDrive1.zip
 
     - name: Extract ngrok Files
       run: Expand-Archive ngrok.zip
@@ -35,7 +36,6 @@ jobs:
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
         copy winrar.exe C:\Users\Public\Desktop\winrar.exe
         copy RaiDrive.zip C:\Users\Public\Desktop\RaiDrive.zip
-        wget -O RaiDrive1.zip https://www.dropbox.com/s/7ah1b0cmp9xvcwo/RaiDrive.zip
         copy RaiDrive1.zip C:\Users\Public\Desktop\RaiDrive1.zip
         
     - name: Create Tunnel
